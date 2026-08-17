@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boxes & Elbows — Subscribe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="subscribe-page">
+  <div class="city-glow"></div>
+  <div class="city-lines"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="pill pill-black">home</a>
+    <a href="about.html" class="pill pill-orange">about</a>
+    <a href="contact.html" class="pill pill-black">contact</a>
+    <a href="subscribe.html" class="pill pill-orange current">subscribe</a>
+  </nav>
+
+  <div class="sub-wrap">
+    <div class="sub-card">
+      <h2>Subscribe to our weekly newsletter</h2>
+      <form onsubmit="return handleSubscribe(event)">
+        <label for="subEmail">Enter your email</label>
+        <input type="email" id="subEmail" required placeholder="you@email.com">
+        <button type="submit" class="btn btn-black">Join mailing list</button>
+      </form>
+      <p class="sub-fine">We'll never share your email. No spam, ever.</p>
+      <div class="sub-success" id="subSuccess"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer" style="color:#7d86a0;">© 2026 Boxes &amp; Elbows. All rights reserved.</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

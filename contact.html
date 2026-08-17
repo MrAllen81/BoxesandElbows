@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boxes & Elbows — Let's Connect</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contact-page">
+
+  <nav class="nav on-light">
+    <a href="index.html" class="pill pill-black">home</a>
+    <a href="about.html" class="pill pill-orange">about</a>
+    <a href="contact.html" class="pill pill-black current">contact</a>
+    <a href="subscribe.html" class="pill pill-orange">subscribe</a>
+  </nav>
+
+  <div class="contact-wrap">
+
+    <div class="polaroid-stack">
+      <div class="polaroid" style="top:0;left:0;transform:rotate(-6deg);">
+        <div class="swatch" style="background:#1d3557;">Parade day</div>
+        <span class="cap">from scenes to memories</span>
+      </div>
+      <div class="polaroid" style="top:60px;left:120px;transform:rotate(4deg);z-index:2;">
+        <div class="swatch" style="background:#e63946;">Section 112</div>
+        <span class="cap">game night</span>
+      </div>
+      <div class="polaroid" style="top:230px;left:10px;transform:rotate(3deg);">
+        <div class="swatch" style="background:#2a9d8f;">Courtside</div>
+        <span class="cap">rec league</span>
+      </div>
+      <div class="polaroid" style="top:200px;left:170px;transform:rotate(-4deg);z-index:1;">
+        <div class="swatch" style="background:#F2780C;">Fan cam</div>
+        <span class="cap">3OT thriller</span>
+      </div>
+    </div>
+
+    <div class="contact-copy">
+      <h2>let's connect</h2>
+      <p>I'm always open to conversations about sports media, content collaborations, guest appearances, or opportunities in analytics-driven broadcasting. Whether you're a fellow creator, a team looking for coverage, or just want to talk basketball strategy, drop me a line below.</p>
+
+      <form class="contact-form" onsubmit="return handleContact(event)">
+        <div>
+          <label for="cName">Name</label>
+          <input type="text" id="cName" required>
+        </div>
+        <div>
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" required>
+        </div>
+        <div>
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-black">Send message</button>
+        <div class="form-msg" id="contactMsg"></div>
+      </form>
+
+      <div class="qr-block">
+        <div class="qr-svg">
+          <svg width="120" height="120" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
+            <rect width="29" height="29" fill="#fff"/>
+            <g fill="#14110E">
+              <rect x="0" y="0" width="7" height="7"/><rect x="1" y="1" width="5" height="5" fill="#fff"/><rect x="2" y="2" width="3" height="3"/>
+              <rect x="22" y="0" width="7" height="7"/><rect x="23" y="1" width="5" height="5" fill="#fff"/><rect x="24" y="2" width="3" height="3"/>
+              <rect x="0" y="22" width="7" height="7"/><rect x="1" y="23" width="5" height="5" fill="#fff"/><rect x="2" y="24" width="3" height="3"/>
+              <rect x="9" y="0" width="1" height="1"/><rect x="11" y="0" width="2" height="1"/><rect x="15" y="0" width="1" height="2"/><rect x="18" y="0" width="1" height="1"/>
+              <rect x="9" y="9" width="2" height="2"/><rect x="13" y="9" width="1" height="1"/><rect x="16" y="9" width="2" height="2"/><rect x="19" y="9" width="1" height="1"/>
+              <rect x="9" y="12" width="1" height="3"/><rect x="12" y="13" width="2" height="1"/><rect x="15" y="11" width="1" height="4"/><rect x="18" y="13" width="2" height="2"/>
+              <rect x="9" y="17" width="2" height="1"/><rect x="13" y="16" width="1" height="2"/><rect x="16" y="18" width="2" height="1"/><rect x="19" y="16" width="1" height="3"/>
+              <rect x="0" y="9" width="1" height="2"/><rect x="0" y="13" width="2" height="1"/><rect x="0" y="16" width="1" height="3"/>
+              <rect x="22" y="9" width="2" height="1"/><rect x="26" y="10" width="1" height="2"/><rect x="22" y="13" width="1" height="3"/><rect x="25" y="14" width="2" height="1"/>
+              <rect x="9" y="22" width="1" height="2"/><rect x="12" y="24" width="2" height="1"/><rect x="16" y="22" width="1" height="3"/><rect x="19" y="25" width="2" height="1"/>
+              <rect x="22" y="22" width="2" height="2"/><rect x="26" y="23" width="1" height="1"/><rect x="22" y="26" width="1" height="1"/><rect x="25" y="26" width="2" height="1"/>
+            </g>
+          </svg>
+        </div>
+        <span class="qr-caption">Scan to subscribe to the show</span>
+      </div>
+
+      <div class="social-row">
+        <a href="https://www.youtube.com/@boxesandelbows" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 8l7 4-7 4V8z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/boxesandelbows" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@boxesandelbows" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M14 3c.5 2.2 2 3.7 4.2 4v2.6c-1.6 0-3-.5-4.2-1.4v6.3a5.1 5.1 0 1 1-4.4-5v2.7a2.4 2.4 0 1 0 1.7 2.3V3h2.7z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">© 2026 Boxes &amp; Elbows. All rights reserved.</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
