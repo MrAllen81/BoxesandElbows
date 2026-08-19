@@ -1,20 +1,35 @@
-// Subscribe form — demo behavior (no backend wired up yet).
-// Swap this for a real request to Mailchimp / ConvertKit / your ESP of choice.
+// Subscribe form — sends silently via Formspree, no email client required.
 function handleSubscribe(event){
   event.preventDefault();
   const input = document.getElementById('subEmail');
   const success = document.getElementById('subSuccess');
   const email = input.value.trim();
   if(!email){return false;}
-  success.textContent = "You're on the list! Look for a confirmation at " + email + ".";
-  success.style.display = 'block';
-  input.value = '';
+
+  fetch('https://formspree.io/f/xbgrqydv', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(event.target)
+  })
+  .then(response => {
+    if(response.ok){
+      success.textContent = "You're on the list! Look for a confirmation at " + email + ".";
+      success.style.display = 'block';
+      input.value = '';
+    } else {
+      success.textContent = "Something went wrong — try again in a bit.";
+      success.style.display = 'block';
+    }
+  })
+  .catch(() => {
+    success.textContent = "Something went wrong — try again in a bit.";
+    success.style.display = 'block';
+  });
+
   return false;
 }
 
-// Contact form — demo behavior. Opens the visitor's email client with the
-// message pre-filled. Replace with a real form handler (Formspree, etc.)
-// whenever you're ready to collect messages server-side.
+// Contact form — sends silently via Formspree, no email client required.
 function handleContact(event){
   event.preventDefault();
   const name = document.getElementById('cName').value.trim();
@@ -27,9 +42,24 @@ function handleContact(event){
     return false;
   }
 
-  const subject = encodeURIComponent('Website message from ' + name);
-  const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-  window.location.href = `mailto:ta85015@gmail.com?subject=${subject}&body=${body}`;
-  msg.textContent = 'Opening your email app…';
+  fetch('https://formspree.io/f/mgawryon', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(event.target)
+  })
+  .then(response => {
+    if(response.ok){
+      msg.textContent = "Message sent — I'll get back to you soon.";
+      document.getElementById('cName').value = '';
+      document.getElementById('cEmail').value = '';
+      document.getElementById('cMessage').value = '';
+    } else {
+      msg.textContent = "Something went wrong — try again in a bit.";
+    }
+  })
+  .catch(() => {
+    msg.textContent = "Something went wrong — try again in a bit.";
+  });
+
   return false;
 }
