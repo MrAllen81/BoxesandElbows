@@ -29,7 +29,7 @@ function handleContact(event){
 
   const subject = encodeURIComponent('Website message from ' + name);
   const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-  window.location.href = `mailto:hello@boxesandelbows.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:ta85015@gmail.com?subject=${subject}&body=${body}`;
   msg.textContent = 'Opening your email app…';
   return false;
 }
