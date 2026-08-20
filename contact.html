@@ -43,18 +43,18 @@
       <p>I'm always open to conversations about sports media, content collaborations, guest appearances, or opportunities in analytics-driven broadcasting. Whether you're a fellow creator, a team looking for coverage, or just want to talk basketball strategy, drop me a line below.</p>
 
       <form class="contact-form" onsubmit="return handleContact(event)">
-        <div>
-          <label for="cName">Name</label>
-          <input type="text" id="cName" required>
-        </div>
-        <div>
-          <label for="cEmail">Email</label>
-          <input type="email" id="cEmail" required>
-        </div>
-        <div>
-          <label for="cMessage">Message</label>
-          <textarea id="cMessage" required></textarea>
-        </div>
+            <div>
+              <label for="cName">Name</label>
+              <input type="text" id="cName" name="name" required>
+          </div>
+          <div>
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" name="email" required>
+          </div>
+          <div>
+              <label for="cMessage">Message</label>
+              <textarea id="cMessage" name="message" required></textarea>
+          </div>
         <button type="submit" class="btn btn-black">Send message</button>
         <div class="form-msg" id="contactMsg"></div>
       </form>
